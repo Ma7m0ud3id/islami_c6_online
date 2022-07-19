@@ -16,6 +16,12 @@ class MyApp extends StatelessWidget {
         HomeLayout.routeName: (c) => HomeLayout(),
         Sepha.routeName:(v)=>Sepha(),
       },
+      theme: ThemeData(
+        textTheme: TextTheme(headline1: TextStyle(color: Colors.white,fontSize: 30,fontWeight:FontWeight.bold ),
+            headline3: TextStyle(color: Colors.black,fontSize: 30,fontWeight:FontWeight.bold,),
+        headline2: TextStyle(color: Colors.white,fontSize: 30,fontWeight:FontWeight.bold,)),
+
+      ),
     );
   }
 }
