@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 
 class Sepha extends StatefulWidget {
  static const String routeName='Sepha';
@@ -66,11 +66,12 @@ class _SephaState extends State<Sepha> {
                     setState((){
                       //text=changetext(text,count);
                      index= Change(text,index);
+                     text=changetext(text,index);
                     });
-                    setState((){
-                      text=changetext(text,index);
-                      //index= Change(text,index,count);
-                    });
+                    // setState((){
+                    //   text=changetext(text,index);
+                    //   index= Change(text,index,count);
+                    // });
 
 
                   }, child:Text('$text',style:Theme.of(context).textTheme.headline3 ,) , style: ButtonStyle(
@@ -90,29 +91,29 @@ class _SephaState extends State<Sepha> {
 
   }
 }
-// actionbutton(String text,int index){
-//
-//   if(text=='How great is our God'){
-//
-//     index++;
-//   }
-//   return index;
-// }
-// actionbutton1(String text,int index){
-//   if(text=='thanks God'){
-//
-//       index++;
-//
-//
-//   }
-//   return index;
-// }
-// actionbutton2(String text,int index){
-//   if(text=='Allah is the greatest'){
-//     index++;
-//   }
-//   return index;
-// }
+actionbutton(String text,int index){
+
+  if(text=='How great is our God'){
+
+    index++;
+  }
+  return index;
+}
+actionbutton1(String text,int index){
+  if(text=='thanks God'){
+
+      index++;
+
+
+  }
+  return index;
+}
+actionbutton2(String text,int index){
+  if(text=='Allah is the greatest'){
+    index++;
+  }
+  return index;
+}
 Change(String text,int index){
   if (index<=33){
     index++;
@@ -167,3 +168,4 @@ changetext(String text,int index){
     }
   }
 }
+*/

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:islami_c6_online/home_layout.dart';
 import 'package:islami_c6_online/sepha_Screen.dart';
+import 'package:islami_c6_online/tabs/Ahadeth/HadethDetails.dart';
+import 'package:islami_c6_online/tabs/Quran/Sora_Screen.dart';
+import 'package:islami_c6_online/thems_data.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,19 +12,17 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return  MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: Sepha.routeName,
-      routes: {
-        HomeLayout.routeName: (c) => HomeLayout(),
-        Sepha.routeName:(v)=>Sepha(),
+      routes:{
+        HomeLayout.routeName:(c)=>HomeLayout(),
+        Sora.routName:(v)=>Sora(),
+        HadethDetails.routeName:(m)=>HadethDetails(),
       },
-      theme: ThemeData(
-        textTheme: TextTheme(headline1: TextStyle(color: Colors.white,fontSize: 30,fontWeight:FontWeight.bold ),
-            headline3: TextStyle(color: Colors.black,fontSize: 30,fontWeight:FontWeight.bold,),
-        headline2: TextStyle(color: Colors.white,fontSize: 30,fontWeight:FontWeight.bold,)),
+      initialRoute:HomeLayout.routeName,
+      theme:Themee.mytheme ,
 
-      ),
     );
+
   }
 }
