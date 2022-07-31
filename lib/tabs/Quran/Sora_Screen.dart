@@ -2,8 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:islami_c6_online/provider/my_provider.dart';
 import 'package:islami_c6_online/tabs/Quran/Sora_Screen_Itim.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:provider/provider.dart';
 class Sora extends StatefulWidget {
 
   static const String routName='Sora';
@@ -17,6 +19,7 @@ class _SoraState extends State<Sora> {
   List<String> Sura=[];
   @override
   Widget build(BuildContext context) {
+    var provider=Provider.of<MyProviderApp>(context);
     var SuraDetailsArgs =
     ModalRoute.of(context)!.settings.arguments as SuraDetailsModel;
     if (Sura.isEmpty){
@@ -24,12 +27,12 @@ class _SoraState extends State<Sora> {
     }
     return Stack(
       children: [
-      Image.asset('assets/images/dark_bg.png',height: double.infinity,width: double.infinity,fit:BoxFit.fill,),
+      Image.asset(provider.getBackground(),height: double.infinity,width: double.infinity,fit:BoxFit.fill,),
 
     Scaffold(
     backgroundColor:Colors.transparent ,
       appBar: AppBar(
-        title: Text('اسلامي',style: Theme.of(context).textTheme.headline1),
+        title: Text('${AppLocalizations.of(context)!.islamiTitle}',style: Theme.of(context).textTheme.headline1),
       ),
       body: Sura.length == 0
           ? Center(child: CircularProgressIndicator())

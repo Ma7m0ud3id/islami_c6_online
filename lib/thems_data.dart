@@ -21,5 +21,21 @@ class Themee {
       bottomNavigationBarTheme: BottomNavigationBarThemeData(selectedItemColor: Colors.black,unselectedItemColor: Colors.white)
 
   );
-  static ThemeData mythemeDark =ThemeData();
+  static ThemeData mythemeLight =ThemeData(
+      primaryColor:Maincolor ,
+
+      textTheme: TextTheme(headline1: TextStyle(fontWeight: FontWeight.bold,fontSize: 30,color: Colors.black),
+        headline2: TextStyle(fontWeight: FontWeight.bold,fontSize: 25,color: Colors.black),
+        headline3: TextStyle(fontWeight: FontWeight.bold,fontSize: 35,color: Colors.black),
+        headline4: TextStyle(fontWeight: FontWeight.bold,fontSize: 30,color: Colors.black),
+      ),
+      appBarTheme: AppBarTheme(
+
+          centerTitle: true,
+          backgroundColor: Colors.transparent,
+          elevation: 0
+
+      ),
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(selectedItemColor: Colors.black,unselectedItemColor: Colors.white)
+  );
 }
