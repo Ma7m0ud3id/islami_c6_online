@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
       ],
       supportedLocales: [
         Locale('en'), // English, no country code
-        Locale('ar'), // Spanish, no country code
+        Locale('ar'), // Arabic, no country code
       ],
 
       locale: Locale(provider.AppLanguage),
